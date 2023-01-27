@@ -154,10 +154,23 @@
                         android:layout_height="wrap_content" />
                     
                     <ImageView
+                        android:id="@+id/ivLocationIcon"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/ic_location_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <ProgressBar
+                        android:id="@+id/pbLocationProgress"
+                        app:indicatorColor="@color/white"
+                        app:trackColor="@color/white"
+                        android:indeterminateDrawable="@drawable/progress_bar_background"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        android:layout_marginEnd="16dp"
                         android:layout_width="20dp"
                         android:layout_height="20dp" />
 

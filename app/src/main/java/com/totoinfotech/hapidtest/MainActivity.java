@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
+import android.location.Geocoder;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.os.LocaleListCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -36,7 +38,10 @@ import com.totoinfotech.hapidtest.Model.PojoUploadApiResponse;
 import com.totoinfotech.hapidtest.databinding.ActivityMainBinding;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.MessageFormat;
+import java.util.List;
+import java.util.Locale;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -98,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.rlLocationBtn.setOnClickListener(view -> {
+            binding.pbLocationProgress.setVisibility(View.VISIBLE);
+            binding.ivLocationIcon.setVisibility(View.GONE);
             getCurrentLocation();
         });
 
@@ -129,7 +136,15 @@ public class MainActivity extends AppCompatActivity {
                                         double latitude = locationResult.getLocations().get(index).getLatitude();
                                         double longitude = locationResult.getLocations().get(index).getLongitude();
 
-                                        binding.etAddress.setText(MessageFormat.format("{0}, {1}", latitude, longitude));
+                                        //binding.etAddress.setText(MessageFormat.format("{0}, {1}", latitude, longitude));
+                                        Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+                                        try {
+                                            binding.etAddress.setText(geocoder.getFromLocation(latitude, longitude, 1).get(0).getPostalCode());
+                                            binding.pbLocationProgress.setVisibility(View.GONE);
+                                            binding.ivLocationIcon.setVisibility(View.VISIBLE);
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
                                     }
                                 }
                             }, Looper.getMainLooper());
@@ -142,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
