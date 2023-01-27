@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/pop_up_layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_otp_pop_up"
+        style="@style/textViewMontserratSemiBoldStyle"
+        android:text="@string/otp_pop_up_text"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_below="@id/tv_otp_pop_up"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="22dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:layout_marginBottom="28dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edit_text_background" >
+
+        <TextView
+            android:id="@+id/tvOtp"
+            style="@style/textViewMontserratMediumStyle"
+            android:text="5678"
+            android:layout_centerVertical="true"
+            android:letterSpacing="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

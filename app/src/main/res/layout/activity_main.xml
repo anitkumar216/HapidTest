@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="#FFFBF3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                android:src="@drawable/ic_back_icon"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tv_create_profile"
+                style="@style/textViewMontserratBoldHeadingStyle"
+                android:layout_marginTop="24dp"
+                android:text="Create Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/ivProfilePhoto"
+                android:layout_below="@id/tv_create_profile"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_photo_icon"
+                android:layout_width="120dp"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:id="@+id/tvSetProfile"
+                android:text="@string/set_profile"
+                android:layout_below="@id/ivProfilePhoto"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#B3020202"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textViewMontserratBoldHeadingStyle"/>
+
+            <LinearLayout
+                android:layout_below="@id/tvSetProfile"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    style="@style/textViewMontserratMediumStyle14sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:text="First Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    style="@style/textViewMontserratSemiBoldStyle14sp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    style="@style/textViewMontserratMediumStyle14sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:text="Last Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etLastname"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    style="@style/textViewMontserratSemiBoldStyle14sp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    style="@style/textViewMontserratMediumStyle14sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:text="Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    style="@style/textViewMontserratSemiBoldStyle14sp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+                
+                <RelativeLayout
+                    android:id="@+id/rlLocationBtn"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/location_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" >
+
+                    <TextView
+                        android:id="@+id/tv_location_text"
+                        android:text="Pick Your Current Location"
+                        style="@style/textViewMontserratMediumStyle14sp"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_location_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_gravity="center"
+                    style="@style/textViewMontserratSemiBoldStyle"
+                    android:textColor="#66020202"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or" />
+
+                <TextView
+                    style="@style/textViewMontserratMediumStyle14sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:text="Post Code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24sp"
+                    android:imeOptions="actionDone"
+                    style="@style/textViewMontserratSemiBoldStyle14sp"
+                    android:hint="@string/select_post_code_or_address"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_shape"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

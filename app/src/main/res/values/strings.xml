@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Hapid Test</string>
+    <string name="find_nearest_local_market">Find Nearest Local\nMarket</string>
+    <string name="second_splash_long_text">O On-Time Departures. Pay just for your seat. No Refusal from our end. Spacious &amp; Comfortable Seating. Female passengers safety standards. Onboard Refreshments. Cab Tracking through Maps</string>
+    <string name="enter_your_mobile_number">Enter Your Mobile\nNumber</string>
+    <string name="hello_welcome_back_to_our_account">Hello, Welcome Back to Our Account</string>
+    <string name="_0000000000">0000000000</string>
+    <string name="otp_pop_up_text">Your Confirmation Code Is\n Below — Enter It And We\'ll Help\n You Get Signed In.</string>
+    <string name="enter_your_verification_code">Enter Your\nVerification Code</string>
+    <string name="set_profile">Set Profile</string>
+    <string name="or">Or</string>
+    <string name="select_post_code_or_address">Select Post Code Or Address</string>
+</resources>
